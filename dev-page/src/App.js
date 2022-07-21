@@ -9,15 +9,14 @@ import Projects from './Components/Projects';
 
 function App() {
 
-  const [something, setSomething] = useState()
-  
+  const [display, setDislay] = useState()
+
   return (
     <div className="App">
       <main className="base-frame">
         <Header />
         <Screen />
         <Buttons />
-        <h1>Here we go again!</h1>
       </main>
     </div>
   );
