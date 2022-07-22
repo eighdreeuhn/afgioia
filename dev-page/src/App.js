@@ -9,14 +9,36 @@ import Projects from './Components/Projects';
 
 function App() {
 
-  const [display, setDislay] = useState()
+  // console.clear()
+
+  const [display, setDisplay] = useState('none')
+
+  const projects = []
+  let visible
+
+  const handleButtonClick = (e) => {
+    setDisplay(e.target.innerText)
+  }
+
+  useEffect(() => {
+    visible = 
+    display == 'none' ?
+    <Screen/> :
+    display == 'about' ?
+     <About/> :
+    display == 'projects' ?
+    <Projects/> :
+    null
+  }, [display])
 
   return (
     <div className="App">
       <main className="base-frame">
         <Header />
-        <Screen />
-        <Buttons />
+        <Screen>
+          {visible}
+        </Screen>
+        <Buttons onClick={handleButtonClick}/>
       </main>
     </div>
   );

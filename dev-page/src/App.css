@@ -4,21 +4,23 @@
 
 .base-frame {
   display: grid;
-  width: 100%;
+  width: 2500px;
   height: 100%;
   color: violet;
-  background-color: rgb(34, 83, 34);
+  background-color: rgb(1, 10, 43);
 }
 
 .header {
   border-bottom: 1px solid white;
   border-bottom-right-radius: 1em;
-  background-color: slategrey;
+  background-color: darkslategrey;
+  width: 100%;
 }
 
 .screen {
   position: relative;
   display: grid;
+  grid-template: repeat(20, 1fr) / repeat(50, 1fr);
   justify-content: center;
   background-color: white;
   border: 2px solid black;
@@ -27,8 +29,49 @@
   margin: 5% 15% 2% 15%;
 }
 
+.about {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@keyframes snow {
+  0% {filter: brightness(1)}
+  50% {filter: brightness(0.5)}
+  100% {filter: brightness(1)}
+}
+
+.pixel {
+  /* animation: snow 1s infinite ease-in-out; */
+}
+
 .buttons {
   display: grid;
-  height: 3em;
-  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+  height: 10em;
+  width: 1000px;
+  margin: 0 15%;
+  background-color: darkslategrey;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-radius: 10px;
+  margin-bottom: 5%;
+}
+
+.button {
+  transition: all .25s ease;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(122, 25, 44);
+  background-blend-mode: hard-light;
+  color: white;
+}
+
+.button:hover {
+  background-color:greenyellow;
+  border-radius: 0;
+  color: black
 }
