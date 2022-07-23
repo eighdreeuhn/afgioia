@@ -12,32 +12,33 @@ function App() {
   // console.clear()
 
   const [display, setDisplay] = useState('none')
+  const [visible, setVisible] = useState(<Screen/>)
 
   const projects = []
-  let visible
 
   const handleButtonClick = (e) => {
-    setDisplay(e.target.innerText)
+    e.target.innerText === 'Contact' ?
+    setDisplay('none') :
+    setDisplay(e.target.innerText.toLowerCase())
   }
 
   useEffect(() => {
-    visible = 
-    display == 'none' ?
-    <Screen/> :
+    console.log(display)
+    display === 'none' ?
+    setVisible(<Screen />) :
     display == 'about' ?
-     <About/> :
+    setVisible(<About/>) :
     display == 'projects' ?
-    <Projects/> :
-    null
+    setVisible(<Projects/>) :
+    setVisible(<Screen/>)
+    console.log(visible)
   }, [display])
 
   return (
     <div className="App">
       <main className="base-frame">
         <Header />
-        <Screen>
           {visible}
-        </Screen>
         <Buttons onClick={handleButtonClick}/>
       </main>
     </div>
