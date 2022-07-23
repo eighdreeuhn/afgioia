@@ -14,8 +14,6 @@ function App() {
   const [display, setDisplay] = useState('none')
   const [visible, setVisible] = useState(<Screen/>)
 
-  const projects = []
-
   const handleButtonClick = (e) => {
     e.target.innerText === 'Contact' ?
     setDisplay('none') :

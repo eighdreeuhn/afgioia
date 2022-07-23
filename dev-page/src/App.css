@@ -5,7 +5,7 @@
   display: grid;
   width: 100%;
   height: 100%;
-  color: violet;
+  color: white;
   background-color: rgb(1, 10, 43);
 }
 
@@ -40,6 +40,8 @@
 
 .projects {
   position: relative;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   left: 0;
   top: 0;
   border: 2px solid black;
@@ -48,6 +50,94 @@
   margin: 5% 15% 2% 15%;
 }
 
+/* @keyframes jiggle {
+  0% {transform: scale(100%)}
+  50% {transform: scale(110%)}
+  100% {transform: scale(100%)}
+} */
+
+.kanji {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  padding-top: 10px;
+}
+
+.kanji:hover {
+  transform: scale(200%) translateX(150px) translateY(50px);
+  background-color: white;
+  color: black;
+}
+
+.kanji-pic {
+  grid-column: 1;
+  background-image: url('./images/Kanji-deathmatch-screen-shot.png');
+  background-size: cover;
+  border: 1px solid white;
+  /* animation: jiggle 2s infinte ease-in-out; */
+}
+
+
+.kanji h4 {
+  grid-column: 2;
+  margin: 10px 10px;
+}
+
+.pineapple {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.pineapple-pic {
+  grid-column: 1;
+  background-image: url('./images/Pineapple-screenshot.png');
+  background-size: cover;
+  border: 1px solid white
+}
+
+.pineapple h4 {
+  grid-column: 2;
+  margin: 10px 10px;
+}
+
+.windchime {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.windchime-pic {
+  grid-column: 1;
+  background-image: url('./images/Windchimes-screen-shot.png');
+  background-size: cover;
+  border: 1px solid white;
+  margin-top: 5px;
+}
+
+.windchime h4 {
+  grid-column: 2;
+  margin: 10px 10px;
+}
+
+.grid-game {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-pic {
+  grid-column: 1;
+  background-image: url('./images/Grid-game-screen-shot.png');
+  background-size: cover;
+  border: 1px solid white;
+  margin-top: 5px;
+}
+
+.grid-game h4 {
+  grid-column: 2;
+  margin: 10px 10px;
+}
+
+
+
 @keyframes snow {
   0% {filter: brightness(1)}
   50% {filter: brightness(0.5)}
@@ -55,7 +145,7 @@
 }
 
 .pixel {
-  /* animation: snow 1s infinite ease-in-out; */
+  animation: snow 1s infinite ease-in-out;
 }
 
 .buttons {
