@@ -3,7 +3,7 @@ import * as  Tone from 'tone'
 const Pixel = (props) => {
    
     return (
-        <div className="pixel" onMouseOver={() => props.hover(props.note)} style={{backgroundColor: `${props.color}`}}>
+        <div className="pixel" onMouseOver={props.hover} style={{backgroundColor: `${props.color}`}}>
         </div>
     )
 }

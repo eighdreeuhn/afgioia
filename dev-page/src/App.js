@@ -6,7 +6,16 @@ import Buttons from './Components/Buttons';
 import About from './Components/About';
 import Projects from './Components/Projects';
 import Skills from './Components/Skills';
+import Contact from './Components/Contact';
 import * as Tone from 'tone'
+
+const notes = [
+  'A3', 'A4', 'A5',
+  'C#3', 'C#4', 'C#5',
+  'D3', 'D4', 'D5',
+  'A2', 'C#2', 'D2',
+  'A1', 'C#1', 'D1',
+  ]
 
 function App() {
 
@@ -19,8 +28,9 @@ function App() {
   ).toDestination()
   const organ = new Tone.MonoSynth().connect(reverb)
 
-  const handleTone = (note) => {
-    organ.triggerAttackRelease(note, '8n')
+  const handleTone = () => {
+    const rng = Math.floor(Math.random() * 15)
+    organ.triggerAttackRelease(notes[rng], '2n')
   }
 
   const [display, setDisplay] = useState('none')
@@ -41,7 +51,9 @@ function App() {
     setVisible(<Projects/>) :
     display == 'skills' ?
     setVisible(<Skills/>) :
-    console.log(visible)
+    display === 'contact me' ?
+    setVisible(<Contact/>) :
+    console.log('hi')
   }, [display])
 
   return (
