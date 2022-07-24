@@ -17,16 +17,17 @@ const notes = [
   'A1', 'C#1', 'D1',
   ]
 
-function App() {
-
-  // console.clear()
-
   const reverb = new Tone.Reverb(
     {
       wet: 1
     }
-  ).toDestination()
+    ).toDestination()
   const organ = new Tone.MonoSynth().connect(reverb)
+
+function App() {
+
+  // console.clear()
+
 
   const handleTone = () => {
     const rng = Math.floor(Math.random() * 15)

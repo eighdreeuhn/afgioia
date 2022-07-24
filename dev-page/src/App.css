@@ -214,6 +214,7 @@ a {
 }
 .pixel:hover {
   transform: scale(400%);
+  border: 1px solid black;
 }
 
 .buttons {
