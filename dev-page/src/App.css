@@ -1,6 +1,10 @@
 .App {
 }
 
+a {
+  text-decoration: none;
+}
+
 @keyframes appear {
   from {opacity: 0%;}
   to{opacity: 100%;}
@@ -29,7 +33,6 @@
   grid-template: repeat(20, 1fr) / repeat(50, 1fr);
   justify-content: center;
   background-color: rgb(1, 10, 43);
-  border: 2px solid black;
   height: 400px;
   width: 70%;
   margin: 5% 15% 2% 15%;
@@ -39,11 +42,15 @@
 .about {
   display: grid;
   grid-template-columns: repeat(2, 1fr) ;
-  border: 2px solid black;
+  text-align: center;
   height: 400px;
   width: 70%;
   margin: 5% 15% 2% 15%;
   animation: appear 1s ease;
+}
+
+.about h3 {
+  margin: 10%;
 }
 
 .moi {
@@ -131,7 +138,7 @@
 
 .pineapple h4 {
   grid-column: 2;
-  margin: 10px 10px;
+  margin: 60px 10px;
 }
 
 .windchime {
@@ -157,7 +164,7 @@
 
 .windchime h4 {
   grid-column: 2;
-  margin: 10px 10px;
+  margin: 70px 10px;
 }
 
 .grid-game {
@@ -183,7 +190,7 @@
 
 .grid-game h4 {
   grid-column: 2;
-  margin: 10px 10px;
+  margin: 70px 10px;
 }
 
 

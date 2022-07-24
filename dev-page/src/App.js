@@ -12,11 +12,15 @@ function App() {
 
   // console.clear()
 
-  const reverb = new Tone.Reverb().toDestination()
-  const organ = new Tone.PolySynth(Tone.MonoSynth).connect(reverb)
+  const reverb = new Tone.Reverb(
+    {
+      wet: 1
+    }
+  ).toDestination()
+  const organ = new Tone.MonoSynth().connect(reverb)
 
   const handleTone = (note) => {
-    organ.triggerAttackRelease(note, '16n')
+    organ.triggerAttackRelease(note, '8n')
   }
 
   const [display, setDisplay] = useState('none')
@@ -29,8 +33,7 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(display)
-    display === 'none' ?
+    display === 'screen' ?
     setVisible(<Screen onMouseOver={handleTone}/>) :
     display == 'about' ?
     setVisible(<About/>) :
