@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Pixel from './Pixel'
 
 const Screen = props => {
+
   const [screen, setScreen] = useState([])
   const [snow, setSnow] = useState(false)
   let inter
@@ -40,7 +41,7 @@ useEffect(() => {
 }
     , [snow])
 
-  let display = screen.map((pixelColor, index) => <Pixel key={index} color={pixelColor}/>)
+  let display = screen.map((pixelColor, index) => <Pixel note={index} key={index} color={pixelColor} hover={props.onMouseOver}/>)
 
   return <div className='screen'>{display}</div>
 }

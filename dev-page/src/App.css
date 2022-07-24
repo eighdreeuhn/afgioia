@@ -1,10 +1,17 @@
 .App {
 }
 
+@keyframes appear {
+  from {opacity: 0%;}
+  to{opacity: 100%;}
+}
+
+.name-slider {
+  margin-left: 150px;
+}
+
 .base-frame {
   display: grid;
-  width: 100%;
-  height: 100%;
   color: white;
   background-color: rgb(1, 10, 43);
 }
@@ -12,42 +19,59 @@
 .header {
   border-bottom: 1px solid white;
   border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em;
   background-color: darkslategrey;
   width: 100%;
 }
 
 .screen {
-  position: relative;
   display: grid;
   grid-template: repeat(20, 1fr) / repeat(50, 1fr);
   justify-content: center;
-  background-color: white;
+  background-color: rgb(1, 10, 43);
   border: 2px solid black;
   height: 400px;
-  width: 1000px;
+  width: 70%;
   margin: 5% 15% 2% 15%;
+  animation: appear 2s ease;
 }
 
 .about {
-  position: relative;
-  left: 0;
-  top: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) ;
   border: 2px solid black;
   height: 400px;
-  width: 1000px;
+  width: 70%;
   margin: 5% 15% 2% 15%;
+  animation: appear 1s ease;
+}
+
+.moi {
+  background-image: url('./images/20200624_174747.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: blur 1s infinite ease;
+
+}
+
+.skills {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  border: 2px solid black;
+  height: 400px;
+  width: 70%;
+  margin: 5% 15% 2% 15%;
+  animation: appear 1s ease;
 }
 
 .projects {
-  position: relative;
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-  left: 0;
-  top: 0;
   border: 2px solid black;
   height: 400px;
-  width: 1000px;
+  width: 70%;
   margin: 5% 15% 2% 15%;
+  animation: appear 1s ease;
 }
 
 /* @keyframes jiggle {
@@ -61,12 +85,14 @@
   grid-template-columns: repeat(2, 1fr);
   text-align: center;
   padding-top: 10px;
+  transition: transform 500ms, color, 500ms;
 }
 
 .kanji:hover {
-  transform: scale(200%) translateX(150px) translateY(50px);
+  transform: scale(175%) translateX(125px) translateY(50px);
   background-color: white;
   color: black;
+  z-index: 1;
 }
 
 .kanji-pic {
@@ -86,6 +112,14 @@
 .pineapple {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  transition: transform 500ms, color, 500ms;
+}
+
+.pineapple:hover {
+  transform: scale(175%) translateX(-125px) translateY(50px);
+  background-color: white;
+  color: black;
+  z-index: 1;
 }
 
 .pineapple-pic {
@@ -103,6 +137,14 @@
 .windchime {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  transition: transform 500ms, color, 500ms;
+}
+
+.windchime:hover {
+  transform: scale(175%) translateX(125px) translateY(-50px);
+  background-color: white;
+  color: black;
+  z-index: 1;
 }
 
 .windchime-pic {
@@ -121,6 +163,14 @@
 .grid-game {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  transition: transform 500ms, color, 500ms;
+}
+
+.grid-game:hover {
+  transform: scale(175%) translateX(-125px) translateY(-50px);
+  background-color: white;
+  color: black;
+  z-index: 1;
 }
 
 .grid-pic {
@@ -139,13 +189,18 @@
 
 
 @keyframes snow {
-  0% {filter: brightness(1)}
-  50% {filter: brightness(0.5)}
-  100% {filter: brightness(1)}
+  0% {border-radius: 5%;}
+  50% {border-radius: 50%;}
+  /* 75% {transform: scale(25%);} */
+  100% {border-radius: 5%;}
 }
 
 .pixel {
-  animation: snow 1s infinite ease-in-out;
+  animation: snow 2s infinite ease-in-out;
+  margin: 5%;
+}
+.pixel:hover {
+  transform: scale(300%);
 }
 
 .buttons {
@@ -154,7 +209,7 @@
   justify-items: center;
   align-items: center;
   height: 10em;
-  width: 1000px;
+  width: 70%;
   margin: 0 15%;
   background-color: darkslategrey;
   border-top: 2px solid white;

@@ -5,14 +5,22 @@ import Screen from './Components/Screen';
 import Buttons from './Components/Buttons';
 import About from './Components/About';
 import Projects from './Components/Projects';
-
+import Skills from './Components/Skills';
+import * as Tone from 'tone'
 
 function App() {
 
   // console.clear()
 
+  const reverb = new Tone.Reverb().toDestination()
+  const organ = new Tone.PolySynth(Tone.MonoSynth).connect(reverb)
+
+  const handleTone = (note) => {
+    organ.triggerAttackRelease(note, '16n')
+  }
+
   const [display, setDisplay] = useState('none')
-  const [visible, setVisible] = useState(<Screen/>)
+  const [visible, setVisible] = useState(<Screen onMouseOver={handleTone}/>)
 
   const handleButtonClick = (e) => {
     e.target.innerText === 'Contact' ?
@@ -23,12 +31,13 @@ function App() {
   useEffect(() => {
     console.log(display)
     display === 'none' ?
-    setVisible(<Screen />) :
+    setVisible(<Screen onMouseOver={handleTone}/>) :
     display == 'about' ?
     setVisible(<About/>) :
     display == 'projects' ?
     setVisible(<Projects/>) :
-    setVisible(<Screen/>)
+    display == 'skills' ?
+    setVisible(<Skills/>) :
     console.log(visible)
   }, [display])
 
