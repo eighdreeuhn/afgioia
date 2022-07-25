@@ -1,4 +1,5 @@
 .App {
+  font-family: impact;
 }
 
 a {
@@ -82,11 +83,39 @@ a {
 .contact {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  justify-content: center;
   height: 400px;
   width: 70%;
   margin: 5% 15% 2% 15%;
   animation: appear 1s ease;
 }
+
+.git {
+  background-image: url('./images/github-11-128.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 50%;
+}
+
+.linkedin {
+  background-image: url('./images/256px-Linkedin_icon.svg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.mail {
+  background-image: url('./images/download-icon-google+mail+icon-1320192249286867468_0.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+/* .github {
+  height: 100%;
+  width: 100%;
+} */
 
 /* @keyframes jiggle {
   0% {transform: scale(100%)}

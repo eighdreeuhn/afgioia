@@ -38,8 +38,6 @@ function App() {
   const [visible, setVisible] = useState(<Screen onMouseOver={handleTone}/>)
 
   const handleButtonClick = (e) => {
-    e.target.innerText === 'Contact' ?
-    setDisplay('none') :
     setDisplay(e.target.innerText.toLowerCase())
   }
 
@@ -52,7 +50,7 @@ function App() {
     setVisible(<Projects/>) :
     display == 'skills' ?
     setVisible(<Skills/>) :
-    display === 'contact me' ?
+    display === 'contact' ?
     setVisible(<Contact/>) :
     console.log('hi')
   }, [display])

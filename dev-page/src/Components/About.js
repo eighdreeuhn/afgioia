@@ -7,7 +7,7 @@ const About = (props) => {
                 <div className="bottom-left"></div>
                 <div className="bottom-right"></div>
             </div>
-            <h3>A mathematician at heart, I recently made the decision to pursue a career in the software industry. After a long, successful career as a chef, I heard the calling to take up programming a few years back and am thrilled to be making the chamge!</h3>
+            <h3>A mathematician at heart, I recently made the decision to pursue a career in the software industry. After a long, successful career as a chef, I heard the calling to take up programming a few years back and never looked back.</h3>
         </div>
     )
 }
