@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/afgioia/static/css/main.fbce3db0.css",
-    "main.js": "/afgioia/static/js/main.1790a088.js",
+    "main.js": "/afgioia/static/js/main.bd2681b0.js",
     "static/js/787.1efbda30.chunk.js": "/afgioia/static/js/787.1efbda30.chunk.js",
     "static/media/Pineapple-screenshot.png": "/afgioia/static/media/Pineapple-screenshot.53cc3f4ef954c30660c0.png",
     "static/media/Kanji-deathmatch-screen-shot.png": "/afgioia/static/media/Kanji-deathmatch-screen-shot.ca6916dea90d2fc09682.png",
@@ -11,11 +11,11 @@
     "static/media/download-icon-google+mail+icon-_0.svg": "/afgioia/static/media/download-icon-google+mail+icon-1320192249286867468_0.85b7fc053f1bd6f507d6.svg",
     "index.html": "/afgioia/index.html",
     "main.fbce3db0.css.map": "/afgioia/static/css/main.fbce3db0.css.map",
-    "main.1790a088.js.map": "/afgioia/static/js/main.1790a088.js.map",
+    "main.bd2681b0.js.map": "/afgioia/static/js/main.bd2681b0.js.map",
     "787.1efbda30.chunk.js.map": "/afgioia/static/js/787.1efbda30.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fbce3db0.css",
-    "static/js/main.1790a088.js"
+    "static/js/main.bd2681b0.js"
   ]
 }
