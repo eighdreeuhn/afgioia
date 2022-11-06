@@ -7,7 +7,7 @@ import About from './Components/About';
 import Projects from './Components/Projects';
 import Skills from './Components/Skills';
 import Contact from './Components/Contact';
-import * as Tone from 'tone'
+const Tone = reqiure('tone')
 
 const notes = [
   'A3', 'A4', 'A5',
