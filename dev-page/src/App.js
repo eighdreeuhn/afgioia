@@ -7,25 +7,25 @@ import About from './Components/About';
 import Projects from './Components/Projects';
 import Skills from './Components/Skills';
 import Contact from './Components/Contact';
-const Tone = reqiure('tone')
 
+const Tone = require('tone')
 const notes = [
   'A3', 'A4', 'A5',
   'C#3', 'C#4', 'C#5',
   'D3', 'D4', 'D5',
   'A2', 'C#2', 'D2',
   'A1', 'C#1', 'D1',
-  ]
+]
 
-  const reverb = new Tone.Reverb(
-    {
-      wet: 1
-    }
-    ).toDestination()
+const reverb = new Tone.Reverb(
+  {
+    wet: 1
+  }
+  ).toDestination()
   const organ = new Tone.MonoSynth().connect(reverb)
-
-function App() {
-
+  
+  function App() {
+    
   // console.clear()
 
 
