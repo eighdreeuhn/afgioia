@@ -244,6 +244,7 @@ a {
 .pixel:hover {
   transform: scale(400%);
   border: 1px solid black;
+  background-color: rgb(7, 95, 4);
 }
 
 .buttons {
