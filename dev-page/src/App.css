@@ -245,7 +245,7 @@ a {
   transform: scale(400%);
   border: 1px solid black;
   background-color: greenyellow !important;
-  animation: none;
+  animation: snow 4s infinite linear;
 }
 
 .buttons {
