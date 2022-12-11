@@ -10,11 +10,11 @@ import Contact from './Components/Contact';
 
 const Tone = require('tone')
 const notes = [
-  'A3', 'A4', 'A5',
-  'C#3', 'C#4', 'C#5',
-  'D3', 'D4', 'D5',
+  'A3', 'A4', 'A5', 'A6',
+  'C#3', 'C#4', 'C#5', 'C#6',
+  'D3', 'D4', 'D5', 'D6',
   'A2', 'C#2', 'D2',
-  'A1', 'C#1', 'D1',
+  'A1', 'C#1', 'D1'
 ]
 
 const reverb = new Tone.Reverb(
