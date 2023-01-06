@@ -62,6 +62,7 @@ const reverb = new Tone.Reverb(
           {visible}
         <Buttons onClick={handleButtonClick}/>
       </main>
+      
     </div>
   );
 }
