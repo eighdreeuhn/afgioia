@@ -44,11 +44,11 @@ const reverb = new Tone.Reverb(
   useEffect(() => {
     display === 'screen' ?
     setVisible(<Screen onMouseOver={handleTone}/>) :
-    display == 'about' ?
+    display === 'about' ?
     setVisible(<About/>) :
-    display == 'projects' ?
+    display === 'projects' ?
     setVisible(<Projects/>) :
-    display == 'skills' ?
+    display === 'skills' ?
     setVisible(<Skills/>) :
     display === 'contact' ?
     setVisible(<Contact/>) :
